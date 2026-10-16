@@ -1,0 +1,41 @@
+{
+  "name": "dsh-trpg",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DeepSeek Harness 客户端插件：AI 跑团（TRPG）主持人 —— 剧本自适应、GM 吐槽、真随机骰子与检定、贿赂透露情报。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client",
+    "docs",
+    "cordis.patch.yml",
+    "README.md",
+    "CONTRACT.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "node --test --experimental-test-isolation=none test/dice.test.js test/scenario.test.js test/gm.test.js test/bribe.test.js test/store.test.js test/commands.test.js test/host.test.js test/client.test.js test/install.test.js",
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs",
+    "install:profile": "node scripts/install.mjs"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "manifestVersion": 1
+  }
+}

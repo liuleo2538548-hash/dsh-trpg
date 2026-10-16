@@ -1,0 +1,4 @@
+# 源码一律 LF：本仓库含大量中文，跨平台换行转换只会制造无意义的 diff
+* text=auto eol=lf
+*.png binary
+*.jpg binary

@@ -1,0 +1,10 @@
+# 构建产物：由 scripts/build.mjs 生成，不入库（发布用 GitHub Release 或源码安装）
+dist/
+
+# 测试与构建的临时目录（都在 test/ 与仓库根下）
+test/.tmp-*
+.syntax-check.log
+*.tmp
+
+# 坏档留证（正常情况下出现在 ~/.dsh/dsh-trpg/，这里挡住误放进仓库的）
+*.corrupt-*
